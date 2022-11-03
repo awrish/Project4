@@ -126,10 +126,10 @@ public class ProjectDBHelper extends SQLiteOpenHelper {
     // if the version will be bumped up, as we modify the database schema.
     @Override
     public void onUpgrade( SQLiteDatabase db, int oldVersion, int newVersion ) {
-        db.execSQL( "drop table if exists " + TABLE_JOBLEADS );
+        db.execSQL( "drop table if exists " + TABLE_QUESTIONS );
         db.execSQL( "drop table if exists " + TABLE_QUIZ );
         onCreate( db );
-        Log.d( DEBUG_TAG, "Table " + TABLE_JOBLEADS + " upgraded" );
+        Log.d( DEBUG_TAG, "Table " + TABLE_QUESTIONS + " upgraded" );
         Log.d( DEBUG_TAG, "Table " + TABLE_QUIZ + " upgraded" );
     }
 
