@@ -34,27 +34,6 @@ public class ProjectDBHelper extends SQLiteOpenHelper {
     public static final String QUIZ_COLUMN_RESULT = "result";
     public static final String QUIZ_COLUMN_ANSWERED = "answered";
 
-
-    /** FOR DEBUGGGING */
-    public static final String TABLE_JOBLEADS = "jobleads";
-    public static final String JOBLEADS_COLUMN_ID = "_id";
-    public static final String JOBLEADS_COLUMN_NAME = "name";
-    public static final String JOBLEADS_COLUMN_PHONE = "phone";
-    public static final String JOBLEADS_COLUMN_URL = "url";
-    public static final String JOBLEADS_COLUMN_COMMENTS = "comments";
-
-    private static final String CREATE_JOBLEADS =
-            "create table " + TABLE_JOBLEADS + " ("
-                    + JOBLEADS_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                    + JOBLEADS_COLUMN_NAME + " TEXT, "
-                    + JOBLEADS_COLUMN_PHONE + " TEXT, "
-                    + JOBLEADS_COLUMN_URL + " TEXT, "
-                    + JOBLEADS_COLUMN_COMMENTS + " TEXT"
-                    + ")";
-
-    /** FOR DEBUGGGING */
-
-
     //reference to only instance of helper
     private static ProjectDBHelper helperInstance;
 
