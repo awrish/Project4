@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         switch( menuItem.getItemId() ) {
             case R.id.menu_new:
                 //fragment = new AddJobLeadFragment();
+                fragment = new NewQuizFragment();
                 break;
             case R.id.menu_review:
                 //fragment = new ReviewJobLeadsFragment();

@@ -90,7 +90,15 @@ public class ProjectDBHelper extends SQLiteOpenHelper {
      * FOREIGN KEY("q4") REFERENCES "Questions"("id"),
      * FOREIGN KEY("q1") REFERENCES "Questions"("id"),
      * FOREIGN KEY("q5") REFERENCES "Questions"("id")
+     *
      * );
+     */
+
+    /**
+     * Seperate table that isMemberOf the other two tables
+     * Store the result, date, and QuizID
+     * IDK if you would need this thought since the Quiz table should store all this info
+     * @param context
      */
 
     // A Create Table SQL statement to create a table for quiz
