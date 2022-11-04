@@ -28,4 +28,6 @@ public class NewQuizFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_quiz_question, container, false);
     }
 
+    // read the values from SQL and initalize them here ???
+
 }
