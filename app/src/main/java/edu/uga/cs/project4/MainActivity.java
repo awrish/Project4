@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -26,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /** Below is just toolbar stuff */
+
+        //on new quiz i launch fragment that's layout contains
+        //a viewpager 2 with the toolbar etc.
+        //
+        //in that viewpager2 i set the newFragment as the newquizfragment
+        //that should work just fine
 
         // assigning ID of the toolbar to a variable
         toolbar = findViewById( R.id.toolbar );
@@ -59,13 +67,19 @@ public class MainActivity extends AppCompatActivity {
         switch( menuItem.getItemId() ) {
             case R.id.menu_new:
                 //fragment = new AddJobLeadFragment();
-                fragment = new NewQuizFragment();
+                //fragment = new NewQuizFragment();
+                fragment = new QuizPageFragment();
+                /** maybe create a pager fragment which inflates the
+                 * view to one which contains a viewpager and then call the
+                 * newquizfragment inside of that one????
+                 */
                 break;
             case R.id.menu_review:
                 //fragment = new ReviewJobLeadsFragment();
                 break;
             case R.id.menu_help:
                 //fragment = new HelpFragment();
+                fragment = new HelpFragment();
                 break;
             case R.id.menu_close:
                 finish();
