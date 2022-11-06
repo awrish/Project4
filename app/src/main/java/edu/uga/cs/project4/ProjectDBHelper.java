@@ -13,9 +13,10 @@ public class ProjectDBHelper extends SQLiteOpenHelper {
     private static final int DB_VERSION = 1;
 
     /** Questions Table */
+    //maybe leave out the Question???
     public static final String TABLE_QUESTIONS = "questions";
     public static final String QUESTIONS_COLUMN_ID = "_id";
-    public static final String QUESTIONS_COLUMN_Q = "q";
+    //public static final String QUESTIONS_COLUMN_Q = "q";
     public static final String QUESTIONS_COLUMN_CAPITAL = "capital";
     public static final String QUESTIONS_COLUMN_FIRST = "first";
     public static final String QUESTIONS_COLUMN_SECOND = "second";
@@ -42,7 +43,7 @@ public class ProjectDBHelper extends SQLiteOpenHelper {
     private static final String CREATE_QUESTIONS =
             "create table " + TABLE_QUESTIONS + " ("
                 + QUESTIONS_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + QUESTIONS_COLUMN_Q + " TEXT, "
+//                + QUESTIONS_COLUMN_Q + " TEXT, "
                 + QUESTIONS_COLUMN_CAPITAL + " TEXT, "
                 + QUESTIONS_COLUMN_FIRST + " TEXT, "
                 + QUESTIONS_COLUMN_SECOND + " TEXT, "
