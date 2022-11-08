@@ -20,8 +20,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * This class is used to display the Quiz in the 'New Quiz' tab.
+ */
 public class QuizFragment extends Fragment {
-
 
 
     private ViewPager viewPager;
@@ -33,6 +35,8 @@ public class QuizFragment extends Fragment {
     boolean isNewQuiz=true;
     boolean isSavedInDB=false;
     boolean isQuizFinished=false;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -144,6 +148,7 @@ public class QuizFragment extends Fragment {
         }.execute();
     }
 
+    //gets the score of the quiz
     private int getScore() {
         int score=0;
         for(Question question:questionList)
@@ -153,6 +158,7 @@ public class QuizFragment extends Fragment {
         return score;
     }
 
+    //gets number answered in the quiz
     private int getAnswered() {
         int answered=0;
         for(Question question:questionList)
@@ -171,6 +177,7 @@ public class QuizFragment extends Fragment {
 
     }
 
+    //gets the random questions for the quiz
     private void getSixRandomQuestions() {
         AsyncTask<Void,List<Question>> task=new AsyncTask<Void,List<Question>>() {
 

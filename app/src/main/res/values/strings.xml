@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">Project 4</string>
+    <string name="app_name">State Capitals Quiz App</string>
 
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
 
     <string name="help_fragment_text">
         <![CDATA[
-            <h3>State Capitals Quiz App</h3> <p>This app can be take quizzes about the state capitals.
+            <h3>Help</h3> <p>This app can be take quizzes about the state capitals.
             Each quiz consists of 6 questions based on state capitals. Each quiz is unique. Open
             the nav drawer to view the navigation menu. You will be able to invoke the app\'s functions.
             You will be able to access the following screens:<br/><br/>
@@ -20,6 +20,13 @@
              The app will be closed.<br/><br/>
              <b>Get help</b><br/>
              Useful help information about the app will be displayed.<br/><br/>
+             <b>Useful Tips:</b><br/>
+             <ul>
+              <li>To start a new quiz, click on the hamburger icon and then <i>New Quiz</i> </li>
+              <li>When you select an answer, it will be locked and you will not be able to change. Think
+             carefully when choosing your answer.</li>
+              <li>You can review your previous quiz results by clicking on <i>Review past quizzes</i> </li>
+             </ul>
         ]]>
     </string>
 </resources>
