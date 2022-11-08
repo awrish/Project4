@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * This class represents a single question, including all values that are in the columns in the databse.
+ */
 public class Question implements Serializable
 {
-
 
     public int getId() {
         return id;

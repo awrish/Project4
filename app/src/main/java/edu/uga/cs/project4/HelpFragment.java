@@ -10,6 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.core.text.HtmlCompat;
 import androidx.fragment.app.Fragment;
 
+/**
+ * Help fragment class for the app. Sets up the layout for the help fragment.
+ */
 public class HelpFragment extends Fragment {
 
     public HelpFragment() { } //required empty public constructor

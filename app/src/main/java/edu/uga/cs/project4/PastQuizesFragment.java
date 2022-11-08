@@ -13,13 +13,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-
+/**
+ * Past Quizzes fragment for the class. Used in the 'Review Past Quizzes' tab
+ * in the navigation drawer.
+ */
 public class PastQuizesFragment extends Fragment {
-
-
 
     private RecyclerView recyclerView;
     ProjectDBHelper projectDBHelper;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

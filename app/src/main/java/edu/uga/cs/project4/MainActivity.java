@@ -65,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // Used for selecting items in the navigation drawer. Navigates to
+    // page where selected action can take place or exits based on the user's choice.
     public void selectDrawerItem( MenuItem menuItem ) {
         Fragment fragment = null;
 
@@ -102,12 +104,9 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.closeDrawers();
 
 
-
-
-
-
     }
 
+    // Reads data from the CVS file and initializes the Databases.
     private void readAndInsertQuestions() {
 
 
@@ -117,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
             {
 
 
-                if(! projectDBHelper.getQuestions().isEmpty()) //if there is data in database then dont do anything
+                if(! projectDBHelper.getQuestions().isEmpty()) //if there is data in database then don't do anything
                 {
                     return false;
                 }
@@ -165,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
 
+            // Sends message signaling that everything went well.
             @Override
             protected void onPostExecute(Boolean isSuccess) {
 

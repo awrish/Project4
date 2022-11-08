@@ -11,6 +11,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * This is a SQLiteOpenHelper class, which Android uses to create, upgrade, delete an SQLite database
+ * in an app.
+ *
+ * This class is a singleton, following the Singleton Design Pattern.
+ * Only one instance of this class will exist.  To make sure, the
+ * only constructor is private.
+ * Access to the only instance is via the getInstance method.
+ *
+ * Used throughout the project to access the DB and perform actions upon it.
+ */
 public class ProjectDBHelper extends SQLiteOpenHelper {
 
     private static final String DEBUG_TAG = "ProjectDBHelper";
@@ -79,27 +90,6 @@ public class ProjectDBHelper extends SQLiteOpenHelper {
             + ")";
 
 
-    /**
-     * CREATE TABLE "Quiz" (
-     * "id" INTEGER,
-     * "date" INTEGER,
-     * "q1" INTEGER,
-     * "q2" INTEGER,
-     * "q3" INTEGER,
-     * "q4" INTEGER,
-     * "q5" INTEGER,
-     * "q6" INTEGER,
-     * "result" INTEGER,
-     * "answered" INTEGER,
-     * PRIMARY KEY("id" AUTOINCREMENT),
-     * FOREIGN KEY("q2") REFERENCES "Questions"("id"),
-     * FOREIGN KEY("q3") REFERENCES "Questions"("id"),
-     * FOREIGN KEY("q4") REFERENCES "Questions"("id"),
-     * FOREIGN KEY("q1") REFERENCES "Questions"("id"),
-     * FOREIGN KEY("q5") REFERENCES "Questions"("id")
-     * );
-     */
-
     // A Create Table SQL statement to create a table for quiz
     // auto increment primary key is _id
     // each question is a foreign key to the Questions table
@@ -141,6 +131,7 @@ public class ProjectDBHelper extends SQLiteOpenHelper {
     }
 
 
+    // Gets the Questions from the DB
     public List<Question> getQuestions()
     {
         db=this.getReadableDatabase();
@@ -175,7 +166,7 @@ public class ProjectDBHelper extends SQLiteOpenHelper {
         return sixQuestionList;
     }
 
-
+    //Inserts a single question into the Database
     public boolean insertQuestion(Question  question)
     {
         db = this.getWritableDatabase();
@@ -189,7 +180,10 @@ public class ProjectDBHelper extends SQLiteOpenHelper {
     }
 
 
-
+    /**
+     * Gets the saved quiz results from previously taken quizzes.
+     * @return
+     */
     public List<Quiz> getSavedQuizResults()
     {
         db=this.getReadableDatabase();
@@ -206,6 +200,7 @@ public class ProjectDBHelper extends SQLiteOpenHelper {
         return quizArrayList;
     }
 
+    //Inserts a quiz result so it can be displayed in the 'Review prevous quizzes' tab
     public boolean insertQuizResult(Quiz  quiz)
     {
         db = this.getWritableDatabase();

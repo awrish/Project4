@@ -11,6 +11,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+/**
+ * QuizReviewAdapter for the class. Used to display the prevoiusly taken quizzes and attributes
+ * regarding them.
+ */
 public class QuizReviewAdapter extends RecyclerView.Adapter<QuizReviewAdapter.ViewHolder> {
     private List<Quiz> quizList;
     Context context;

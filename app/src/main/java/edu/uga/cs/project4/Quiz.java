@@ -1,5 +1,8 @@
 package edu.uga.cs.project4;
 
+/**
+ * This class represents a single quiz, including all values from columns in the DB.
+ */
 public class Quiz {
 
 
